@@ -13,5 +13,4 @@ def hanoi(n, begin, end, intermidiate):
         if (intermediate = intermidiate.append(subsq_n)) and (end = begin.pop(base_n)):
             subsq_n = intermediate.pop(subsq_n)
             end = end.append(subsq_n)
-
-        print(end)
+            return end
