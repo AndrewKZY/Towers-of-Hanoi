@@ -1,19 +1,20 @@
-def hanoi(n, begin, end, intermidiate):
+def hanoi(n):
         n = int(input('Enter number of disks: '))
-        begin = [range(n)]
-        end = []
-        intermidiate = []
         if n <= 0:
             print('Error.')
         else:
-            subsq_n = begin.pop(1:)
-            intermediate = intermidiate.append(subsq_n)
+            begin = [range(n)] #starting pole
+            end = [] #end pole
+            inter = [] #intermediate pole
+            subsq_n = begin.pop(range(1,n)) #everything except the 1st disk
+            inter = inter[subsq_n]
             base_n = begin(0)
             for base_n in begin:
                 base_n = begin.pop(base_n)
-                end = [base_n]
-            if (intermediate = intermidiate.append(subsq_n)) and (end = begin.pop(base_n)):
-                subsq_n = intermediate.pop(subsq_n)
+                end = end[base_n]
+            if (inter[subsq_n]) and (end[base_n]):
+                subsq_n = inter.pop(subsq_n)
                 end = end.append(subsq_n)
-            return
-print(end)
+            return end
+        print(end)
+
