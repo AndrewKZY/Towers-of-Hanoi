@@ -6,7 +6,6 @@ def hanoi(n, begin, end, inter):
             if n == 1:
                 break
             else:
-                begin.append(n)
                 n -= 1
         if n < 0:
             print('Error.')
@@ -15,4 +14,5 @@ def hanoi(n, begin, end, inter):
         if begin[0]:
             inter.append(begin.pop())
         hanoi(n - 1, inter, begin, end)
-        return end
+        print(end)
+        return
